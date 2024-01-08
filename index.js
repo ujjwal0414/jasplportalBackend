@@ -17,7 +17,7 @@ app.get("/sendmail/:recepient",(req,resp)=>{
         secure:true,
         requireSSL:true,
         auth:{
-            user:"ujjuguptu@gmail.com",
+            user:process.env.PROVIDER,
             pass:process.env.SMTP_AUTH
         }
     });
